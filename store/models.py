@@ -8,7 +8,7 @@ class Product(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     description = models.TextField()
     price = models.IntegerField()
-    images = models.ImageField(upload_to='photos/products', blank=True)
+    images = models.ImageField(upload_to='photos/products', blank=True, null=False)
     stock = models.IntegerField()
     is_available = models.BooleanField(default=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)

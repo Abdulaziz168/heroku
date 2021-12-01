@@ -32,7 +32,7 @@
                                     <ul class="list-menu">
                                         <li><a href="{%url 'store'%}">All Products</a></li>
                                         {%for category in links%}
-                                        <li><a href="{{category.get_url}}">{{category.category_name}} </a></li>
+                                        <li class="table table-striped table-danger"><a class="col" href="{{category.get_url}}">{{category.category_name}} </a></li>
                                         {%endfor%}
                                     </ul>
 
@@ -44,7 +44,7 @@
                                 <a href="#" data-toggle="collapse" data-target="#collapse_4" aria-expanded="true"
                                    class="">
                                     <i class="icon-control fa fa-chevron-down"></i>
-                                    <h6 class="title">Sizes </h6>
+                                    <h6 class="title ">Sizes </h6>
                                 </a>
                             </header>
                             <div class="filter-content collapse show" id="collapse_4" style="">
@@ -145,7 +145,7 @@
                                             <span class="price">${{ product.price }}</span>
                                         </div> <!-- price-wrap.// -->
                                     </div>
-                                    <a href="#" class="btn btn-block btn-success">Added to cart </a>
+                                    <a href="{%url 'add_cart' product.id %}" class="btn btn-block btn-success">Added to cart </a>
                                 </figcaption>
                             </figure>
                         </div> <!-- col.// -->
